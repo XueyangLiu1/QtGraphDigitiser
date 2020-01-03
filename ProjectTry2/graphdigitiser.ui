@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GraphDigitiser</class>
+ <widget class="QMainWindow" name="GraphDigitiser">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>825</width>
+    <height>496</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GraphDigitiser</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>811</width>
+      <height>431</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>825</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen_Image"/>
+    <addaction name="actionExport_Data"/>
+   </widget>
+   <widget class="QMenu" name="menuActions">
+    <property name="title">
+     <string>Actions</string>
+    </property>
+    <addaction name="actionCalibrate"/>
+    <addaction name="actionManually_digitise"/>
+    <addaction name="actionAuto_digitise"/>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <widget class="QMenu" name="menuAxes_type">
+     <property name="title">
+      <string>Axes type</string>
+     </property>
+     <addaction name="actionLinear_linear"/>
+     <addaction name="actionLinear_log"/>
+     <addaction name="actionlog_Linear"/>
+     <addaction name="actionLog_Log"/>
+    </widget>
+    <addaction name="menuAxes_type"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuActions"/>
+   <addaction name="menuSettings"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen_Image">
+   <property name="text">
+    <string>Open Image</string>
+   </property>
+  </action>
+  <action name="actionExport_Data">
+   <property name="text">
+    <string>Export Data</string>
+   </property>
+  </action>
+  <action name="actionCalibrate">
+   <property name="text">
+    <string>Calibrate</string>
+   </property>
+  </action>
+  <action name="actionManually_digitise">
+   <property name="text">
+    <string>Manually digitise</string>
+   </property>
+  </action>
+  <action name="actionAuto_digitise">
+   <property name="text">
+    <string>Auto-digitise</string>
+   </property>
+  </action>
+  <action name="actionLinear_linear">
+   <property name="text">
+    <string>Linear-Linear</string>
+   </property>
+  </action>
+  <action name="actionLinear_log">
+   <property name="text">
+    <string>Linear(x)-Log(y)</string>
+   </property>
+  </action>
+  <action name="actionlog_Linear">
+   <property name="text">
+    <string>Log(x)-Linear(y)</string>
+   </property>
+  </action>
+  <action name="actionLog_Log">
+   <property name="text">
+    <string>Log-Log</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
