@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>825</width>
-    <height>496</height>
+    <width>954</width>
+    <height>580</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,10 +18,19 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
-      <width>811</width>
-      <height>431</height>
+      <y>0</y>
+      <width>801</width>
+      <height>511</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="resizeAnchor">
+     <enum>QGraphicsView::AnchorUnderMouse</enum>
     </property>
    </widget>
   </widget>
@@ -30,7 +39,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>825</width>
+     <width>954</width>
      <height>21</height>
     </rect>
    </property>
@@ -48,6 +57,7 @@
     <addaction name="actionCalibrate"/>
     <addaction name="actionManually_digitise"/>
     <addaction name="actionAuto_digitise"/>
+    <addaction name="actionShow_data"/>
    </widget>
    <widget class="QMenu" name="menuSettings">
     <property name="title">
@@ -55,7 +65,7 @@
     </property>
     <widget class="QMenu" name="menuAxes_type">
      <property name="title">
-      <string>Axes type</string>
+      <string>Axis type</string>
      </property>
      <addaction name="actionLinear_linear"/>
      <addaction name="actionLinear_log"/>
@@ -126,6 +136,11 @@
   <action name="actionLog_Log">
    <property name="text">
     <string>Log-Log</string>
+   </property>
+  </action>
+  <action name="actionShow_data">
+   <property name="text">
+    <string>Show/Hide data</string>
    </property>
   </action>
  </widget>
