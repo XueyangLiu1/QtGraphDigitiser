@@ -6,21 +6,27 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>954</width>
-    <height>580</height>
+    <width>565</width>
+    <height>438</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>GraphDigitiser</string>
   </property>
   <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
    <widget class="QGraphicsView" name="graphicsView">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>0</y>
-      <width>801</width>
-      <height>511</height>
+      <width>541</width>
+      <height>361</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -28,6 +34,12 @@
       <horstretch>0</horstretch>
       <verstretch>0</verstretch>
      </sizepolicy>
+    </property>
+    <property name="cursor" stdset="0">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
     </property>
     <property name="resizeAnchor">
      <enum>QGraphicsView::AnchorUnderMouse</enum>
@@ -39,7 +51,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>954</width>
+     <width>565</width>
      <height>21</height>
     </rect>
    </property>
@@ -55,9 +67,9 @@
      <string>Actions</string>
     </property>
     <addaction name="actionCalibrate"/>
+    <addaction name="actionAjust_Scale"/>
     <addaction name="actionManually_digitise"/>
     <addaction name="actionAuto_digitise"/>
-    <addaction name="actionShow_data"/>
    </widget>
    <widget class="QMenu" name="menuSettings">
     <property name="title">
@@ -78,6 +90,7 @@
     <property name="title">
      <string>About</string>
     </property>
+    <addaction name="actionInformation"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuActions"/>
@@ -91,29 +104,66 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actionOpen_Image"/>
+   <addaction name="separator"/>
+   <addaction name="actionExport_Data"/>
+   <addaction name="separator"/>
+   <addaction name="actionCalibrate"/>
+   <addaction name="separator"/>
+   <addaction name="actionManually_digitise"/>
+   <addaction name="separator"/>
+   <addaction name="actionAuto_digitise"/>
+   <addaction name="separator"/>
+   <addaction name="actionLinear_linear"/>
+   <addaction name="separator"/>
+   <addaction name="actionLinear_log"/>
+   <addaction name="separator"/>
+   <addaction name="actionlog_Linear"/>
+   <addaction name="separator"/>
+   <addaction name="actionLog_Log"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionOpen_Image">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/open_file.png</normaloff>:/icons/open_file.png</iconset>
+   </property>
    <property name="text">
     <string>Open Image</string>
    </property>
   </action>
   <action name="actionExport_Data">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/save_file.png</normaloff>:/icons/save_file.png</iconset>
+   </property>
    <property name="text">
     <string>Export Data</string>
    </property>
   </action>
   <action name="actionCalibrate">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/axis.png</normaloff>:/icons/axis.png</iconset>
+   </property>
    <property name="text">
     <string>Calibrate</string>
    </property>
   </action>
   <action name="actionManually_digitise">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/target.png</normaloff>:/icons/target.png</iconset>
+   </property>
    <property name="text">
     <string>Manually digitise</string>
    </property>
   </action>
   <action name="actionAuto_digitise">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/auto.png</normaloff>:/icons/auto.png</iconset>
+   </property>
    <property name="text">
     <string>Auto-digitise</string>
    </property>
@@ -129,6 +179,9 @@
    </property>
   </action>
   <action name="actionlog_Linear">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Log(x)-Linear(y)</string>
    </property>
@@ -138,13 +191,20 @@
     <string>Log-Log</string>
    </property>
   </action>
-  <action name="actionShow_data">
+  <action name="actionAjust_Scale">
    <property name="text">
-    <string>Show/Hide data</string>
+    <string>Ajust Scale</string>
+   </property>
+  </action>
+  <action name="actionInformation">
+   <property name="text">
+    <string>Information</string>
    </property>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
  <connections/>
 </ui>

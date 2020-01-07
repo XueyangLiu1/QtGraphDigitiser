@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>auto.png</file>
+        <file>axis.png</file>
+        <file>open_file.png</file>
+        <file>save_file.png</file>
+        <file>target.png</file>
+    </qresource>
+</RCC>
